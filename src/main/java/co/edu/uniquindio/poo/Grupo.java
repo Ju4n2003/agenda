@@ -56,7 +56,7 @@ public class Grupo {
 
     public boolean eliminarContacto(Contacto contacto) {
         if (contactos.contains(contacto)) {
-            if (contactos.size() <= 5) {
+            if (contactos.size() < 5) {
                 mostrarMensaje("No se puede eliminar el contacto. El grupo debe tener al menos 5 contactos.");
                 return false;
             }
@@ -80,12 +80,4 @@ public class Grupo {
         mostrarMensaje("Contacto agregado: " + contacto.getNombre());
         return true;
     }
-
-    /**public void addContacto(Contacto contacto) {
-        if (verificarContactoExistente(contacto.getNombre(), contacto.getTelefono())) {
-            contactos.add(contacto);
-        } else {
-            System.out.println("El contacto ya existe en el grupo");
-        }
-    }*/
 }

@@ -1,14 +1,8 @@
 package co.edu.uniquindio.poo;
 
 import java.sql.Time;
-import java.time.LocalDate;
-import java.time.LocalTime;
+
 import java.util.Date;
-import java.util.LinkedList;
-
-import javax.swing.JOptionPane;
-
-import co.edu.uniquindio.poo.Grupo.Categoria;
 
 public class App {
     public static void main(String[] args) {
