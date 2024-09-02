@@ -20,18 +20,23 @@ public class ContactoTest {
     /**
      * Rigorous Test :-)
      */
+    // Prueba para datos nulos
     @Test
-    public void datosVacios() {
-        LOG.info("Iniciado test shouldAnswerWithTrue");
+    public void datosNulos() {
+        LOG.info("Iniciado test datosNulos");
         assertThrows(Throwable.class, ()-> new Contacto(null, null, null, null, null));
         LOG.info("Finalizando test shouldAnswerWithTrue");
     }
+    // Prueba para datos invalidos
+    
     @Test
     public void datosInvalidos() {
-        LOG.info("Iniciado test shouldAnswerWithTrue");
+        LOG.info("Iniciado test datosInvalidos");
         assertThrows(Throwable.class, ()-> new Contacto(" ", "  ", "  ", "  ", "  "));
-        LOG.info("Finalizando test shouldAnswerWithTrue");
+        LOG.info("Finalizando test datosInvalidos");
     }
+    
+    // Prueba para validar el correo 
     @Test
     public void validacionCorreo() {
         LOG.info("Iniciado test validacionCorreo");

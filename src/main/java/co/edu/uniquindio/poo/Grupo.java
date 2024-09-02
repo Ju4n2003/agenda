@@ -20,6 +20,7 @@ public class Grupo {
         this.categoria = categoria;
         this.contactos = new LinkedList<>();
     }
+    //Gets y sets 
 
     public String getNombre() {
         return nombre;
@@ -49,14 +50,14 @@ public class Grupo {
     public String toString() {
         return nombre + " (" + categoria + "): " + contactos +": "+ contactos.size() +" contactos";
     }
-
+    // Metodo para mostrar mensaje 
     public void mostrarMensaje(String mensaje) {
         System.out.println(mensaje);
     }
-
+    // Metodo para eliminar un contacto 
     public boolean eliminarContacto(Contacto contacto) {
         if (contactos.contains(contacto)) {
-            if (contactos.size() < 5) {
+            if (contactos.size() < 5) { // Si la lista tiene menos de 5 contactos no se puede eliminar 
                 mostrarMensaje("No se puede eliminar el contacto. El grupo debe tener al menos 5 contactos.");
                 return false;
             }

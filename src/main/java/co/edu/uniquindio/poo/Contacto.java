@@ -13,13 +13,14 @@ public class Contacto {
         this.direccion = direccion;
         this.telefono = telefono;
         this.email = email;
-        assert nombre != null : "El nombre no puede estar vacio ni en blanco";
-        assert alias != null;
-        assert direccion != null;
-        assert telefono != null;
-        assert email != null ; email.isBlank();
-        assert email.contains("@");
+        assert nombre != null && !nombre.isBlank() : "El nombre no puede estar vacio ni en blanco";
+        assert alias != null && !alias.isBlank() : "El alias no puede estar vacio ni en blanco";
+        assert direccion != null && !direccion.isBlank() : "La direccion no puede estar vacio ni en blanco";
+        assert telefono != null && !telefono.isBlank() : "El telefono no puede estar vacio ni en blanco";
+        assert email != null && !email.isBlank() : "El email no puede estar vacio ni en blanco";
+        assert email.contains("@") : "El email debe contener el caratcer @ ";
     }
+    // gets y sets 
 
     public String getNombre() {
         return nombre;
